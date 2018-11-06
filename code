@@ -1,0 +1,23 @@
+public class Naive
+{
+   public static void search(String txt,String ptr)
+   {
+     int N = txt.length();
+     int M = ptr.length();
+     for(int i=0;i<N-M;i++)
+     {
+       int j;
+       for(j=0;j<M;j++)
+          if(txt.charAt(i+j)!=ptr.charAt(j))
+              break;
+              if(j==M)
+              System.out.println("pattern found":+i);
+     }
+   }  
+   public static void main(String args[])
+   {
+      String txt ="aabaacaadaabaaabaa";
+      String ptr ="aaba";
+      search(txt,ptr);
+   }
+}   
